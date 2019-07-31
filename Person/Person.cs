@@ -3,8 +3,12 @@ namespace Person
 {
     public class Person
     {
+        public static string scientificName;
         private string name;
         private int age;
+
+        //constructor
+        static Person() { Person.scientificName = "Homo sapiens"; }
 
         //constructor
         public Person(string name, int age)
