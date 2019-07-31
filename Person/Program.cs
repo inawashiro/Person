@@ -6,17 +6,17 @@ namespace Person
     {
         static void Main(string[] args)
         {
-            var person = new Person("Hiromichi", 24);
-            Console.WriteLine($"{person.GetName()} is {person.GetAge()} years old.");
+            var person = new Person("Hiromichi", 25);
+            Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
             person = new Person("Hiromichi");
-            Console.WriteLine($"{person.GetName()} is {person.GetAge()} years old.");
+            Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
-            person = new Person(24);
-            Console.WriteLine($"{person.GetName()} is {person.GetAge()} years old.");
+            person = new Person(25);
+            Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
             person = new Person();
-            Console.WriteLine($"{person.GetName()} is {person.GetAge()} years old.");
+            Console.WriteLine($"{person.Name} is {person.Age} years old.");
         }
     }
 }
