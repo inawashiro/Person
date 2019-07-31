@@ -7,6 +7,8 @@ namespace Person
         static void Main(string[] args)
         {
             var person = new Person("Hiromichi", 24);
+            Console.WriteLine($"{person.Name} is {person.ScientificName}.");
+
             Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
             person = new Person("Hiromichi");
