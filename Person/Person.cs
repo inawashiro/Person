@@ -3,15 +3,12 @@ namespace Person
 {
     public class Person
     {
-        private static string scientificName;
+        public static string scientificName;
         private string name;
         private int age;
 
         //constructor
-        static Person()
-        {
-            Person.scientificName = "Homo sapiens";
-        }
+        static Person() { Person.scientificName = "Homo sapiens"; }
 
         //constructor
         public Person(string name, int age)
