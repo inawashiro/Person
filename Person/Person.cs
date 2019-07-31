@@ -27,6 +27,12 @@ namespace Person
         public Person() : this("None", -1) { }
 
         //property
+        public string ScientificName
+        {
+            get { return Person.scientificName; }
+        }
+
+        //property
         public string Name
         {
             set { this.name = value; }
