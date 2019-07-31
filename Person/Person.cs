@@ -3,15 +3,16 @@ namespace Person
 {
     public class Person
     {
-        private string Name;
-        private int Age;
+        private string name;
+        private int age;
 
         //constructor
         public Person(string name, int age)
         {
-            this.Name = name;
-            this.Age = age;
+            this.name = name;
+            this.age = age;
         }
+
         //constructor
         public Person(string name) : this(name, -1) { }
 
@@ -21,24 +22,18 @@ namespace Person
         //constructor
         public Person() : this("None", -1) { }
 
-        public string GetName()
+        //property
+        public string Name
         {
-            return this.Name;
+            set { this.name = value; }
+            get { return this.name; }
         }
 
-        public void SetName(string name)
+        //property
+        public int Age
         {
-            this.Name = name;
-        }
-
-        public int GetAge()
-        {
-            return this.Age;
-        }
-
-        public void SetAge(int age)
-        {
-            this.Age = age > 0 ? age : 0;
+            set { this.age = value > 0 ? this.age : 0; }
+            get { return this.age; }
         }
     }
 }
