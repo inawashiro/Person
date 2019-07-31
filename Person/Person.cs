@@ -3,8 +3,15 @@ namespace Person
 {
     public class Person
     {
+        private static string scientificName;
         private string name;
         private int age;
+
+        //constructor
+        static Person()
+        {
+            Person.scientificName = "Homo sapiens";
+        }
 
         //constructor
         public Person(string name, int age)
@@ -21,6 +28,12 @@ namespace Person
 
         //constructor
         public Person() : this("None", -1) { }
+
+        //property
+        public string ScientificName
+        {
+            get { return Person.scientificName; }
+        }
 
         //property
         public string Name
