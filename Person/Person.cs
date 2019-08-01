@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Person
 {
     public class Person
@@ -7,30 +8,24 @@ namespace Person
         private string name;
         private int age;
 
-        //constructor
-        static Person() { Person.scientificName = "Homo sapiens"; }
+        ////constructor
+        //static Person() { Person.scientificName = "Homo sapiens"; }
 
-        //constructor
-        public Person(string name, int age)
-        {
-            this.name = name;
-            this.age = age;
-        }
+        ////constructor
+        //public Person(string name, int age)
+        //{
+        //    this.name = name;
+        //    this.age = age;
+        //}
 
-        //constructor
-        public Person(string name) : this(name, -1) { }
+        ////constructor
+        //public Person(string name) : this(name, -1) { }
 
-        //constructor
-        public Person(int age) : this("None", age) { }
+        ////constructor
+        //public Person(int age) : this("None", age) { }
 
-        //constructor
-        public Person() : this("None", -1) { }
-
-        //property
-        public string ScientificName
-        {
-            get { return Person.scientificName; }
-        }
+        ////constructor
+        //public Person() : this("None", -1) { }
 
         //property
         public string Name
@@ -42,8 +37,23 @@ namespace Person
         //property
         public int Age
         {
-            set { this.age = value > 0 ? this.age : 0; }
-            get { return this.age; }
+            set { this.age = value; }
+            get
+            {
+                this.age = this.age > 0 ? this.age : 0;
+                return this.age;
+            }
+        }
+    }
+
+    class Student : Person
+    {
+        private int id;
+
+        public int Id
+        {
+            set { this.id = value; }
+            get { return this.id; }
         }
     }
 }
