@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Person
 {
@@ -6,19 +6,31 @@ namespace Person
     {
         static void Main(string[] args)
         {
-            var person = new Person("Hiromichi", 24);
-            Console.WriteLine($"{person.Name} is {Person.scientificName}.");
+            //Person person = new Person("Hiromichi", 24);
+            //Console.WriteLine($"{person.Name} is {Person.scientificName}.");
 
-            Console.WriteLine($"{person.Name} is {person.Age} years old.");
+            //Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
-            person = new Person("Hiromichi");
-            Console.WriteLine($"{person.Name} is {person.Age} years old.");
+            //person = new Person("Hiromichi");
+            //Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
-            person = new Person(24);
-            Console.WriteLine($"{person.Name} is {person.Age} years old.");
+            //person = new Person(24);
+            //Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
-            person = new Person();
-            Console.WriteLine($"{person.Name} is {person.Age} years old.");
+            //person = new Person();
+            //Console.WriteLine($"{person.Name} is {person.Age} years old.");
+
+            Student student = new Student();
+            student.Name = "Hiromichi";
+            student.Age = 24;
+            student.Id = 340350;
+            Console.WriteLine($"{student.Name}(:{student.Id}) is {student.Age} years old.");
+
+            Person person = student;
+            Console.WriteLine($"{student.Name}(:{student.Id}) is {student.Age} years old.");
+
+            //Student student1 = person;
+            //Console.WriteLine($"{person.Name}(:{person.Id}) is {person.Age} years old.");
         }
     }
 }
