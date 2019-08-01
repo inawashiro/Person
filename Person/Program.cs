@@ -20,10 +20,7 @@ namespace Person
             //person = new Person();
             //Console.WriteLine($"{person.Name} is {person.Age} years old.");
 
-            Student student = new Student();
-            student.Name = "Hiromichi";
-            student.Age = 24;
-            student.Id = 340350;
+            Student student = new Student("Hiromichi", 24, 340350);
             Console.WriteLine($"{student.Name}(:{student.Id}) is {student.Age} years old.");
 
             Person person = student;
