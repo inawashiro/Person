@@ -4,19 +4,19 @@ namespace Person
 {
     public class Person
     {
-        public static string scientificName;
+        //public static string scientificName;
         private string name;
         private int age;
 
         ////constructor
         //static Person() { Person.scientificName = "Homo sapiens"; }
 
-        ////constructor
-        //public Person(string name, int age)
-        //{
-        //    this.name = name;
-        //    this.age = age;
-        //}
+        //constructor
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
 
         ////constructor
         //public Person(string name) : this(name, -1) { }
@@ -49,6 +49,11 @@ namespace Person
     class Student : Person
     {
         private int id;
+
+        public Student(string name, int age, int id) : base(name, age)
+        {
+            this.id = id;
+        }
 
         public int Id
         {
