@@ -6,7 +6,7 @@ namespace Person
     {
         //public static string scientificName;
         private string name;
-        private int age;
+        protected int age;
 
         ////constructor
         //static Person() { Person.scientificName = "Homo sapiens"; }
@@ -35,13 +35,49 @@ namespace Person
         }
 
         //property
-        public int Age
+        public virtual int Age
         {
             set { this.age = value; }
+            //get
+            //{
+            //    this.age = this.age > 0 ? this.age : 0;
+            //    return this.age;
+            //}
+            get { return 0; }
+        }
+    }
+
+    class Truepenny : Person
+    {
+        //constructor
+        public Truepenny(string name, int age) : base(name, age) { }
+
+        //property
+        public override int Age
+        {
+            get { return this.age; }
+        }
+    }
+
+    class Equivocator : Person
+    {
+        //constructor
+        public Equivocator(string name, int age) : base(name, age) { }
+
+        //property
+        public override int Age
+        {
             get
             {
-                this.age = this.age > 0 ? this.age : 0;
-                return this.age;
+                int remainder = this.age % 10;
+                if (remainder < 5)
+                {
+                    return this.age - remainder;
+                }
+                else
+                {
+                    return this.age - remainder + 10;
+                }
             }
         }
     }
