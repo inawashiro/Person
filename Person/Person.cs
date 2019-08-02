@@ -2,7 +2,7 @@
 
 namespace Person
 {
-    public class Person
+    public abstract class Person
     {
         //public static string scientificName;
         private string name;
@@ -26,10 +26,9 @@ namespace Person
         }
 
         //property
-        public virtual int Age
+        public abstract int Age
         {
-            set { this.age = value; }
-            get { return 0; }
+            get;
         }
     }
 
