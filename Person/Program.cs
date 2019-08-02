@@ -13,7 +13,7 @@ namespace Person
             Introduce(equivocator);
         }
 
-        static void Introduce(Person person)
+        static void Introduce(IPerson person)
         {
             Console.WriteLine($"My name is {person.Name}.");
             Console.WriteLine($"I am {person.Age} years old.");
