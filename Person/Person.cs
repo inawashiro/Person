@@ -18,15 +18,6 @@ namespace Person
             this.age = age;
         }
 
-        ////constructor
-        //public Person(string name) : this(name, -1) { }
-
-        ////constructor
-        //public Person(int age) : this("None", age) { }
-
-        ////constructor
-        //public Person() : this("None", -1) { }
-
         //property
         public string Name
         {
@@ -38,11 +29,6 @@ namespace Person
         public virtual int Age
         {
             set { this.age = value; }
-            //get
-            //{
-            //    this.age = this.age > 0 ? this.age : 0;
-            //    return this.age;
-            //}
             get { return 0; }
         }
     }
@@ -79,22 +65,6 @@ namespace Person
                     return this.age - remainder + 10;
                 }
             }
-        }
-    }
-
-    class Student : Person
-    {
-        private int id;
-
-        public Student(string name, int age, int id) : base(name, age)
-        {
-            this.id = id;
-        }
-
-        public int Id
-        {
-            set { this.id = value; }
-            get { return this.id; }
         }
     }
 }
