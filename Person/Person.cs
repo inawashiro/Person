@@ -2,17 +2,22 @@
 
 namespace Person
 {
-    public abstract class Person
+    interface IPerson
     {
-        //public static string scientificName;
-        private string name;
-        protected int age;
+        //property
+        string Name { get; }
 
-        ////constructor
-        //static Person() { Person.scientificName = "Homo sapiens"; }
+        //property
+        int Age { get; }
+    }
+
+    class Truepenny : IPerson
+    {
+        private string name;
+        private int age;
 
         //constructor
-        public Person(string name, int age)
+        public Truepenny(string name, int age)
         {
             this.name = name;
             this.age = age;
@@ -21,36 +26,36 @@ namespace Person
         //property
         public string Name
         {
-            set { this.name = value; }
             get { return this.name; }
         }
 
         //property
-        public abstract int Age
-        {
-            get;
-        }
-    }
-
-    class Truepenny : Person
-    {
-        //constructor
-        public Truepenny(string name, int age) : base(name, age) { }
-
-        //property
-        public override int Age
+        public int Age
         {
             get { return this.age; }
         }
     }
 
-    class Equivocator : Person
+    class Equivocator : IPerson
     {
+        private string name;
+        private int age;
+
         //constructor
-        public Equivocator(string name, int age) : base(name, age) { }
+        public Equivocator(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
 
         //property
-        public override int Age
+        public string Name
+        {
+            get { return this.name; }
+        }
+
+        //property
+        public int Age
         {
             get
             {
