@@ -4,10 +4,8 @@ namespace Person
 {
     interface IPerson
     {
-        //property
+        //properties
         string Name { get; }
-
-        //property
         int Age { get; }
     }
 }
