@@ -6,8 +6,8 @@ namespace Person
     {
         static void Main(string[] args)
         {
-            //var person = new Truepenny("Hiromichi", 24);
-            var person = new Equivocator("Hiromichi", 24);
+            var person = new Truepenny("Hiromichi", 24);
+            //var person = new Equivocator("Hiromichi", 24);
             Introduce(person);
         }
 
